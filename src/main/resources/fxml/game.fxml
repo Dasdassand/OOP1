@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlClasses.Controller">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="Игра">
+            <MenuItem fx:id="newGameMenu" mnemonicParsing="false" onAction="#onNewGameMenu" text="Новая игра" />
+         <SeparatorMenuItem mnemonicParsing="false" />
+         <MenuItem fx:id="undoMenu" mnemonicParsing="false" onAction="#onUndo" text="Отменить" />
+         <MenuItem fx:id="redoMenu" mnemonicParsing="false" onAction="#onRedo" text="Вернуть" />
+         <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="saveGameMenu" mnemonicParsing="false" onAction="#onSaveGameMenu" text="Сохранить" />
+            <MenuItem fx:id="saveAsGameMenu" mnemonicParsing="false" onAction="#onSaveAsGameMenu" text="Сохранить как..." />
+            <MenuItem fx:id="loadGameMenu" mnemonicParsing="false" onAction="#onLoadGameMenu" text="Загрузить" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="quitGameMenu" mnemonicParsing="false" onAction="#onQuitGameMenu" text="Выход" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="О игре">
+            <MenuItem fx:id="rulesGameMenu" mnemonicParsing="false" onAction="#onRulesGameMenu" text="Правила" />
+        </Menu>
+    </MenuBar>
+    <AnchorPane prefHeight="484.0" prefWidth="887.0" VBox.vgrow="ALWAYS">
+        <HBox fx:id="attackCardsBox" layoutX="19.0" layoutY="203.0" prefHeight="140.0" prefWidth="645.0" AnchorPane.bottomAnchor="396.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="536.0" AnchorPane.topAnchor="232.0" />
+        <HBox fx:id="defendCardsBox" layoutX="51.0" layoutY="291.0" prefHeight="140.0" prefWidth="645.0" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="504.0" AnchorPane.topAnchor="320.0" />
+        <ImageView fx:id="deckImageView" fitHeight="140.0" fitWidth="96.0" layoutX="1048.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="326.0" AnchorPane.leftAnchor="1048.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="302.0" />
+        <ImageView fx:id="trumpImageView" fitHeight="46.0" fitWidth="46.0" layoutX="1073.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="466.0" AnchorPane.leftAnchor="1073.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="256.0" />
+        <Text fx:id="numberOfCardsText" fill="#ffdd00" layoutX="1027.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="138.0000114440918" AnchorPane.bottomAnchor="296.482421875" AnchorPane.leftAnchor="1027.0" AnchorPane.rightAnchor="34.9999885559082" AnchorPane.topAnchor="447.576171875">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="actionText" fill="#ffdd00" layoutX="395.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="194.6708984375" AnchorPane.bottomAnchor="182.482421875" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="610.3291015625" AnchorPane.topAnchor="561.576171875">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Text>
+        <HBox fx:id="opponentsBox" layoutX="19.0" layoutY="14.0" prefHeight="170.0" prefWidth="761.0" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="14.0" />
+        <Pane layoutX="17.0" layoutY="614.0" prefHeight="140.0" prefWidth="1180.0">
+            <HBox fx:id="handBox" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="3.0" prefHeight="134.0" prefWidth="1174.0" />
+        </Pane>
+        <Pane fx:id="buttonPane" layoutX="614.0" layoutY="558.0" prefHeight="31.0" prefWidth="195.0" AnchorPane.bottomAnchor="178.0" AnchorPane.leftAnchor="607.0" AnchorPane.rightAnchor="398.0" AnchorPane.topAnchor="559.0" />
+      <Pane fx:id="logsPane" layoutX="789.0" layoutY="14.0" prefHeight="170.0" prefWidth="392.0" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="789.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="14.0" />
+    </AnchorPane>
+</VBox>
